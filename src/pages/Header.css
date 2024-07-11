@@ -1,4 +1,11 @@
 /* Body Styles */
+/* Header.css */
+@import "~bootstrap/dist/css/bootstrap.min.css";
+@import "~@fortawesome/fontawesome-free/css/all.min.css";
+
+/* Your custom CSS styles here */
+/* ... */
+
 body {
   font-family: 'Poppins', sans-serif;
   background-color: #F2F2F2;
@@ -28,6 +35,7 @@ body {
   display: flex;
   justify-content: space-between;
   align-items: center;
+  flex-wrap: wrap; /* Allow wrapping for smaller screens */
 }
 
 .top-bar-info {
@@ -231,4 +239,126 @@ h2 {
 
 h3 {
   font-size: 18px;
+}
+
+/* Media Queries for Responsive Design */
+@media (max-width: 1200px) {
+  .container {
+    width: 90%;
+  }
+}
+
+@media (max-width: 992px) {
+  .container {
+    width: 95%;
+  }
+  
+  .top-bar .container-fluid {
+    flex-direction: column;
+  }
+  
+  .quick-call-container {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+  
+  .quick-call {
+    margin-right: 0;
+    margin-bottom: 10px;
+  }
+}
+
+@media (max-width: 768px) {
+  .navbar-brand-text {
+    font-size: 20px;
+  }
+  
+  .top-link, .top-bar-info, .notification-bar {
+    font-size: 12px;
+  }
+  
+  .btn-get-started {
+    padding: 8px 16px;
+  }
+  
+  .quick-call .call-icon {
+    font-size: 1.2rem;
+  }
+  
+  .quick-call .call-details span:first-child {
+    font-size: 0.8rem;
+  }
+  
+  .quick-call .call-details span:last-child {
+    font-size: 0.9rem;
+  }
+  
+  /* Ensure the nav links are displayed in a vertical column on mobile */
+  .collapse.navbar-collapse {
+    display: flex;
+    flex-direction: row; /* Change to row for horizontal layout */
+    align-items: center; /* Align items center */
+    justify-content: space-around; /* Space out items evenly */
+  }
+  
+  .navbar-nav {
+    flex-direction: row; /* Make navbar links horizontal */
+  }
+  
+  .navbar-nav .nav-item {
+    margin: 0 5px; /* Add spacing between items */
+  }
+  
+  .dropdown-menu {
+    position: static; /* Ensure dropdowns position correctly */
+    float: none;
+  }
+}
+
+@media (max-width: 576px) {
+  .navbar-brand-text {
+    font-size: 18px;
+  }
+  
+  .btn-get-started {
+    font-size: 14px;
+  }
+  
+  .top-bar .container-fluid {
+    align-items: flex-start;
+  }
+  
+  .quick-call-container {
+    padding: 5px;
+  }
+  
+  .quick-call .call-details span:first-child {
+    font-size: 0.7rem;
+  }
+  
+  .quick-call .call-details span:last-child {
+    font-size: 0.8rem;
+  }
+}
+/* Dropdown Styles */
+.dropdown-menu {
+  background-color: #ffffff;
+  border: 1px solid #e0e0e0;
+  border-radius: 6px;
+}
+
+.dropdown-item {
+  color: #3DB166;
+  padding: 10px 20px;
+}
+
+.dropdown-item:hover {
+  background-color: #f2f2f2;
+  color: #192F59;
+}
+
+.dropdown-divider {
+  border-top: 1px solid #060606;
+  width: 100%;
+  margin: 0;
 }

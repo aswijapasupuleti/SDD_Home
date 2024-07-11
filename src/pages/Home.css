@@ -242,7 +242,6 @@
   font-size: 16px; /* Body text size */
   color: #666;
 }
-
 .more-button-card {
   background-color: #192F59; /* Secondary color */
   border-radius: 6px;
@@ -260,19 +259,26 @@
 }
 
 .more-button {
-  background-color: #192F59; /* Secondary color */
+  background-color: #192F59; /* Primary color */
   color: white;
   border: none;
   border-radius: 6px;
-  padding: 16px 32px; /* Increased padding for larger button */
-  font-size: 24px; /* Increased font size for larger button */
+  padding: 32px 64px; /* Increased padding for larger button */
+  font-size: 32px; /* Increased font size for larger button */
   cursor: pointer;
   transition: background-color 0.3s;
+  display: flex; /* Add flexbox properties */
+  justify-content: center; /* Center the text horizontally */
+  align-items: center; /* Center the text vertically */
   font-family: 'Poppins', sans-serif;
 }
 
+.more-button.secondary {
+  background-color: #3DB166; /* Secondary color filled */
+}
+
 .more-button:hover {
-  background-color: #3DB166; /* Primary color */
+  background-color: #3DB166; /* Secondary color on hover */
 }
 
 /* Services Media Queries */
@@ -315,7 +321,7 @@
   justify-content: center;
   align-items: center;
   width: 100%;
-  background-color: #F2F2F2; /* Page BG Color */
+  background-color: #192F59; /* Page BG Color */
   margin-top: 20px; /* Adjusted margin top */
 }
 
@@ -323,14 +329,14 @@
   display: flex;
   justify-content: space-between;
   align-items: center; /* Center align items vertically */
-  width: 90%; /* Adjusted width to remove left and right space */
+  width: 200%; /* Adjusted width to remove left and right space */
   max-width: 1200px;
   margin: 0 auto;
 }
 
 .sdg-solutions-left {
   flex: 1;
-  margin-right: 10px; /* Reduced margin-right */
+  margin-right: 100px; /* Reduced margin-right */
   padding: 20px;
   border-radius: 8px;
   background-color: #3DB166; /* Primary color */
@@ -421,7 +427,7 @@
 /* Header section */
 .header-bar {
   width: 100%;
-  background-color: #3DB166; /* Primary color */
+  background-color: #f0f0f0; /* Primary color */
   display: flex;
   justify-content: space-between; /* Spread items evenly */
   align-items: center;
@@ -437,7 +443,7 @@
 .header-text {
   flex: 1; /* Take remaining space */
   text-align: center;
-  color: white; /* Text color */
+  color: black; /* Text color */
 }
 
 .header-text h1 {
@@ -454,7 +460,7 @@
 }
 
 .help-button {
-  background-color: #192F59; /* Button background color */
+  background-color:#3DB166; /* Button background color */
   color: white; /* Button text color */
   border: 2px solid #3DB166; /* Border color */
   padding: 8px 16px; /* Button Padding */
@@ -513,18 +519,24 @@
 
 
 /* Main content section */
+/* Main content section */
+/* Main Content Section */
 .main-content {
-  background-color: white;
-  color: black;
-  padding: 40px 20px;
+  background-image: url('background.jpg'); /* Replace 'path_to_your_image' with the actual path to your image */
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  color: white;
+  padding: 40px 50px;
   display: flex;
-  flex-direction: column; /* Adjusted for mobile layout */
+  flex-direction: row; /* Adjusted for desktop layout */
   align-items: center;
-  text-align: center;
+  justify-content: flex-start; /* Align content to the left */
+  text-align: left; /* Align text to the left */
 }
 
 .content-text {
-  max-width: 100%; /* Adjusted for mobile layout */
+  max-width: 50%; /* Adjusted for desktop layout */
 }
 
 .content-text h2 {
@@ -546,21 +558,24 @@
   color: white;
   border: none;
   padding: 10px 20px;
-  font-size: 16px;
+  font-size: 18px;
   cursor: pointer;
   border-radius: 5px;
   margin-top: 20px; /* Added margin for spacing */
-}
-
-.content-image img {
-  max-width: 100%;
-  height: auto;
+  width: auto; /* Adjust button width */
 }
 
 /* Responsive adjustments */
 @media (max-width: 768px) {
   .main-content {
+    flex-direction: column; /* Stack elements vertically on smaller screens */
+    align-items: center; /* Center align content */
     padding: 20px 10px; /* Reduce padding for smaller screens */
+  }
+
+  .content-text {
+    max-width: 100%; /* Full width for smaller screens */
+    text-align: center; /* Center align text for smaller screens */
   }
 
   .content-text h1 {
@@ -574,6 +589,7 @@
   .explore-button {
     padding: 8px 16px; /* Adjust button padding for smaller screens */
     font-size: 14px; /* Adjust button text size for smaller screens */
+    width: 100%; /* Full width for button on smaller screens */
   }
 }
 
@@ -604,24 +620,23 @@
   padding: 40px 20px;
   display: flex;
   flex-direction: column; /* Adjusted for mobile layout */
-  align-items: center;
-  text-align: center;
+  align-items: flex-start; /* Align items to the left */
+  text-align: center; /* Align text to the center initially */
 }
 
-.digital-marketing-image img {
-  width: 100%;
-  height: auto;
-  max-width: 100%; /* Ensure image responsiveness */
+.digital-marketing-image {
+  width: 100%; /* Ensure image responsiveness */
+  max-width: 100%;
   margin-bottom: 20px;
 }
 
 .digital-marketing-text {
   max-width: 100%; /* Adjusted for mobile layout */
-  color: #192F59; /* Followed color */
+  color: #192F59; /* Text color */
 }
 
 .digital-marketing-text h2 {
-  color: #3DB166; /* Followed color */
+  color: #3DB166; /* Heading color */
 }
 
 .digital-marketing-text h1 {
@@ -649,55 +664,70 @@
   content: '➔';
   position: absolute;
   left: 0;
-  color: #3DB166; /* Followed color */
+  color: #3DB166; /* List item bullet color */
 }
 
 /* Responsive Adjustments */
 @media (min-width: 768px) {
-  .main-content,
   .digital-marketing-section {
-    flex-direction: row; /* Switch back to row layout */
+    flex-direction: row; /* Ensure row layout on larger screens */
     justify-content: space-between;
-    align-items: flex-start;
-    text-align: left;
+    align-items: center; /* Center items vertically */
+    text-align: left; /* Align text to the left */
+    padding: 40px 20px; /* Adjust padding for desktop */
   }
 
-  .content-text,
-  .digital-marketing-text {
-    max-width: 50%;
-    text-align: left;
-  }
-
-  .digital-marketing-image img {
+  .digital-marketing-image {
+    width: 40%; /* Adjusted image width for desktop */
     max-width: none;
-    width: 50%; /* Adjusted image width */
-    margin-bottom: 0;
+    margin-right: 40px; /* Margin between image and text */
+  }
+
+  .digital-marketing-text {
+    max-width: 50%; /* Adjusted width for text content */
   }
 }
-/* last section */
+
+/* Media Query for Smaller Screens */
+@media (max-width: 767px) {
+  .digital-marketing-section {
+    padding: 40px 20px; /* Adjust padding for smaller screens */
+  }
+
+  .digital-marketing-image {
+    width: 100%; /* Full width for image on smaller screens */
+    margin-right: 0; /* Remove margin on smaller screens */
+    margin-bottom: 20px;
+  }
+
+  .digital-marketing-text {
+    max-width: 100%; /* Full width for text content on smaller screens */
+    text-align: center; /* Center text on smaller screens */
+  }
+}
+
+body, html {
+  margin: 0;
+  padding: 0;
+  width: 100%;
+  height: 100%;
+  box-sizing: border-box;
+}
+
 .container {
   display: flex;
   align-items: center;
   justify-content: center;
-  height: 100vh;
+  min-height: 100vh;
   background-color: #F2F2F2; /* Page BG Color */
   color: #24272C; /* Text Color */
   font-family: 'Poppins', sans-serif; /* Font Style */
   padding: 20px;
 }
 
-.form-section {
-  flex: 1;
-  background-color: #F2F2F2; /* Page BG Color */
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  padding: 50px;
-}
-
 .form-container {
   display: flex;
-  max-width: 1200px;
+  max-width: 1500px;
   width: 100%;
   background-color: #fff; /* White background */
   border-radius: 8px;
@@ -707,7 +737,6 @@
 
 .form-image {
   flex: 1;
-  max-width: 100%;
 }
 
 .form-image img {
@@ -767,8 +796,8 @@ button {
   border: none;
   border-radius: 6px; /* Border radius */
   cursor: pointer;
-  font-size: 16px; /* Body text */
-  width: 100%;
+  font-size: 18px; /* Body text */
+  width: 30%;
   transition: background-color 0.3s ease; /* Smooth hover transition */
 }
 
@@ -777,15 +806,45 @@ button:hover {
 }
 
 @media (max-width: 768px) {
+  body, html {
+    overflow-x: hidden; /* Prevent horizontal scrolling */
+  }
+  
   .container {
     flex-direction: column;
+    padding: 20px; /* Padding for mobile view */
   }
 
-  .form-section {
-    padding: 30px;
+  .form-container {
+    flex-direction: column; /* Stack form elements on smaller screens */
+    width: 100%;
+    margin: 0; /* Remove margin */
+  }
+
+  .form-image img {
+    width: 100%;
+    height: auto;
+    border-radius: 8px 8px 0 0; /* Adjust border radius for top corners only */
+    margin-bottom: 20px; /* Margin bottom for spacing */
+  }
+
+  .form-content {
+    padding: 20px; /* Adjusted padding for smaller screens */
   }
 
   .form-content h1 {
     font-size: 20px; /* Adjusted font size for smaller screens */
+  }
+
+  .input-row {
+    flex-direction: column; /* Ensure inputs stack vertically */
+  }
+
+  .input-row input {
+    width: 100%; /* Full width for inputs on smaller screens */
+  }
+
+  button {
+    width: 100%; /* Full width for button on smaller screens */
   }
 }

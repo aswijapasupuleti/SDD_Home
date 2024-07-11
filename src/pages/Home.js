@@ -100,16 +100,17 @@ const Home = () => {
 
       {/* Main Content Section */}
       <div className="main-content">
-        <div className="content-text">
-          <h2>SDG Solutions Cloud</h2>
-          <h1>Unleash The Power Of Cloud With AWS Services</h1>
-          <p>Amazon Web Services provides a wide range of cloud services for web development, which can help developers to build and deploy web applications with ease. Some of the AWS cloud services that are commonly used in web development include EC2, S3, CloudFront, RDS, Route53, API Gateway, Lambda Etc.,</p>
-          <button className="explore-button">Explore</button>
-        </div>
-        <div className="content-image">
-          <img src="path_to_aws_image" alt="AWS Services" />
-        </div>
-      </div>
+  <div className="content-text">
+    <h2>SDG Solutions Cloud</h2>
+    <h1>Unleash The Power Of Cloud With AWS Services</h1>
+    <p>Amazon Web Services provides a wide range of cloud services for web development, which can help developers to build and deploy web applications with ease. Some of the AWS cloud services that are commonly used in web development include EC2, S3, CloudFront, RDS, Route53, API Gateway, Lambda Etc.,</p>
+    <button className="explore-button">Explore</button>
+  </div>
+  {/* <!-- <div className="content-image">
+    <img src="path_to_aws_image" alt="AWS Services" />
+  </div> --> */}
+</div>
+
 
       {/* Digital Marketing Section */}
       <div className="digital-marketing-section">

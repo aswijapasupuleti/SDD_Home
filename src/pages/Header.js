@@ -1,5 +1,7 @@
 import React from "react";
 import "./Header.css"; // Import the CSS file
+import 'bootstrap/dist/css/bootstrap.min.css'; // Import Bootstrap CSS
+import 'bootstrap/dist/js/bootstrap.bundle.min.js'; // Import Bootstrap JS (includes Popper.js)
 import '@fortawesome/fontawesome-free/css/all.min.css';
 import logo from "./SDG-Logo.png"; // Adjust the path according to your project structure
 
@@ -7,7 +9,7 @@ function Navbar() {
   return (
     <div className="navbar-container">
       <div className="top-bar">
-        <div className="container-fluid d-flex justify-content-between align-items-center">
+        <div className="container-fluid d-flex justify-content-between align-items-center flex-wrap">
           <span className="top-bar-info">Mon-Fri: 8:00 AM - 6:30 PM</span>
           <div className="notification-bar">
             <span>
@@ -48,7 +50,7 @@ function Navbar() {
           <div className="collapse navbar-collapse" id="navbarSupportedContent">
             <ul className="navbar-nav me-auto mb-2 mb-lg-0">
               <li className="nav-item">
-                <a className="nav-link active" aria-current="page" href="/">
+                <a className="nav-link" href="/home">
                   Home
                 </a>
               </li>
@@ -69,18 +71,17 @@ function Navbar() {
               </li>
               {/* New Dropdown for Pages */}
               <li className="nav-item dropdown">
-                <a
-                  className="nav-link dropdown-toggle"
-                  href="/"
-                  role="button"
+                <button
+                  className="nav-link dropdown-toggle btn"
+                  id="navbarDropdown"
                   data-bs-toggle="dropdown"
                   aria-expanded="false"
                 >
                   Pages
-                </a>
-                <ul className="dropdown-menu">
+                </button>
+                <ul className="dropdown-menu" aria-labelledby="navbarDropdown">
                   <li>
-                    <a className="dropdown-item" href="/legal">
+                    <a className="dropdown-item" href="/legal-pages">
                       Legal Pages
                     </a>
                   </li>
@@ -88,7 +89,7 @@ function Navbar() {
                     <hr className="dropdown-divider" />
                   </li>
                   <li>
-                    <a className="dropdown-item" href="/join">
+                    <a className="dropdown-item" href="/join-with-us">
                       Join with us
                     </a>
                   </li>
