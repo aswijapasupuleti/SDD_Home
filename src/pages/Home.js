@@ -6,6 +6,8 @@ import { faChartLine, faGlobe, faLightbulb } from '@fortawesome/free-solid-svg-i
 const Home = () => {
   return (
     <div className="home">
+      <img src="path_to_home-img_image" alt="Home Img" class="styled-image" />
+
       {/* Home Hero Section */}
       <section className="home-hero-bar">
         <div className="home-hero-content">

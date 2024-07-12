@@ -1,4 +1,29 @@
 /* Home Component Specific Styles */
+
+.styled-image {
+  width: 100%; /* Make the image responsive */
+  max-width: 1600px; /* Set a maximum width */
+  min-height: 500px; /* Set a minimum height */
+  height: auto; /* Maintain the aspect ratio */
+  border: none; /* Remove the border */
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* Add a shadow effect */
+  display: block; /* Center the image */
+  margin: 0px auto; /* Center the image with margin */
+  object-fit: cover; /* Ensure the image covers the area */
+}
+
+/* Media query for small devices */
+@media (max-width: 600px) {
+  .styled-image {
+    min-height: 300px; /* Adjust minimum height for small devices */
+    border-radius: 50px; /* Adjust border radius for small devices */
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1); /* Adjust shadow effect for small devices */
+  }
+}
+
+
+
+
 .home {
   font-family: 'Poppins', sans-serif;
   background-color: #F2F2F2;
@@ -727,7 +752,7 @@ body, html {
 
 .form-container {
   display: flex;
-  max-width: 1500px;
+  max-width: 1600px;
   width: 100%;
   background-color: #fff; /* White background */
   border-radius: 8px;
