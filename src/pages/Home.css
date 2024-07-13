@@ -272,7 +272,7 @@
 }
 
 .more-button-card {
-  background-color: #3DB166; /* Secondary color */
+  background-color: #3DB166; /* Primary color */
   border-radius: 6px;
   padding: 20px; /* Increase padding for better click area */
   margin: 10px; /* Adjust margin for spacing */
@@ -288,12 +288,12 @@
   cursor: pointer;
   border: none; /* Remove default button border */
   color: white; /* Text color */
-  font-size: 49px; /* Text size */
+  font-size: 32px; /* Text size */
 }
 
 .more-button-card:hover {
   background-color: #192F59; /* Secondary color on hover */
-  color:#3DB166 ;
+  color: #3DB166;
 }
 
 /* Services Media Queries */
@@ -325,10 +325,26 @@
     padding: 5px 15px;
   }
 
+  .services-cards {
+    flex-direction: column;
+    align-items: center;
+  }
+
   .service-card {
     max-width: 100%;
+    margin: 10px 0; /* Adjust margin for better spacing on mobile */
+    height: auto; /* Let the height adjust based on content */
+  }
+
+  .more-button-card {
+    max-width: 100%;
+    margin: 10px 0; /* Adjust margin for better spacing on mobile */
+    height: auto; /* Let the height adjust based on content */
+    padding: 15px; /* Adjust padding for mobile */
+    font-size: 24px; /* Adjust font size for mobile */
   }
 }
+
 
 /* SDG Sol section */
 .sdg-solutions-section {
