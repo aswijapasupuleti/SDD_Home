@@ -185,13 +185,14 @@
 
 @media (max-width: 768px) {
   .footer, .footer-secondary, .footer-bottom {
-    flex-direction: column;
+    flex-direction: row;
     align-items: flex-start;
     padding: 20px 10px;
+    margin-right:10px;
   }
 
   .footer-info {
-    flex-direction: column;
+    flex-direction: row;
     margin-left: 0;
   }
 
@@ -204,7 +205,7 @@
   }
 
   .footer-bottom {
-    flex-direction: column;
+    flex-direction: row;
     text-align: center;
   }
 

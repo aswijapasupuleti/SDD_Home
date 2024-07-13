@@ -1,11 +1,4 @@
-/* Body Styles */
-/* Header.css */
-@import "~bootstrap/dist/css/bootstrap.min.css";
-@import "~@fortawesome/fontawesome-free/css/all.min.css";
-
-/* Your custom CSS styles here */
-/* ... */
-
+/* General Styles */
 body {
   font-family: 'Poppins', sans-serif;
   background-color: #F2F2F2;
@@ -40,7 +33,7 @@ body {
 
 .top-bar-info {
   color: black;
-  background-color: #7ed7a8; /* Lighter blue color */
+  background-color: #B8E2C8; /* Lighter blue color */
   padding: 5px 10px;
   border-radius: 5px;
   margin: 0 5px; /* Margin for separation */
@@ -51,7 +44,7 @@ body {
 .top-links-container {
   display: flex;
   align-items: center;
-  background-color: #7ed7a8; /* Lighter blue color */
+  background-color: #B8E2C8; /* Lighter blue color */
   padding: 5px 10px;
   border-radius: 5px;
 }
@@ -75,58 +68,13 @@ body {
   flex-grow: 1;
   margin: 0 15px; /* Adjust margin as needed */
 }
-
-.navbar-brand-text {
-  font-family: 'Poppins', sans-serif; /* Ensure Poppins font for consistency */
-  font-size: 24px; /* Adjust size as per h2 (24px) */
-  font-weight: bold; /* Assuming navbar-brand-text is a primary heading */
-}
-
-.btn-get-started {
-  background-color: #3DB166; /* Primary Color */
-  color: #ffffff;
-  border: 1px solid #3DB166; /* Primary Color */
-  border-radius: 6px;
-  padding: 10px 20px;
-  transition: background-color 0.3s, color 0.3s;
-}
-
-.btn-get-started:hover {
-  background-color: #192F59; /* Secondary Color */
-  color: #3DB166; /* Primary Color */
-}
-
-.call-icon {
-  color: #3DB166; /* Primary Color */
-  font-size: 18px; /* Adjust size as needed */
-  margin-right: 5px;
-}
-
-.quick-call-container {
-  margin-left: auto; /* Pushes quick-call and Get Started buttons to the right */
-}
-
 /* Navbar Styles */
 .navbar {
   background-color: #ffffff;
-}
-
-.navbar-brand {
   display: flex;
   align-items: center;
+  justify-content: space-between;
 }
-
-.navbar-brand img {
-  margin-right: 10px;
-}
-
-/* Navbar Brand Text */
-.navbar-brand-text {
-  font-weight: bold;
-  color: #000000;
-}
-
-/* Nav Link Styles */
 .nav-link {
   color: #3DB166;
 }
@@ -135,22 +83,36 @@ body {
   color: #192F59;
   text-decoration: underline;
 }
-
-/* Navbar Toggler */
-.navbar-toggler {
-  border: none;
+.navbar-brand {
+  display: flex;
+  align-items: center;
+  margin-right: auto;
 }
 
+.navbar-brand img {
+  margin-right: 10px;
+}
+
+.navbar-brand-text {
+  font-weight: bold;
+  color: #000000;
+  margin-right: 10px; /* Add some spacing between the text and the toggler */
+}
+
+.navbar-toggler {
+  border: none;
+  align-items: right;
+  
+}
 .navbar-toggler-icon {
   background-image: url("data:image/svg+xml,%3csvg viewBox='0 0 30 30' xmlns='http://www.w3.org/2000/svg'%3e%3cpath stroke='rgba(0, 0, 0, 0.5)' stroke-width='2' stroke-linecap='round' stroke-miterlimit='10' d='M4 7h22M4 15h22M4 23h22'/%3e%3c/svg%3e");
 }
 
-/* Navbar Collapse */
 .collapse.navbar-collapse {
   justify-content: flex-end;
 }
 
-/* Dropdown Menu */
+
 .dropdown-menu {
   background-color: #ffffff;
   border: 1px solid #e0e0e0;
@@ -258,13 +220,13 @@ h3 {
   }
   
   .quick-call-container {
-    flex-direction: column;
+    flex-direction: row;
     align-items: flex-start;
   }
   
   .quick-call {
-    margin-right: 0;
-    margin-bottom: 10px;
+    margin-right:5px;
+    margin-bottom: 5px;
   }
 }
 
@@ -293,25 +255,48 @@ h3 {
     font-size: 0.9rem;
   }
   
-  /* Ensure the nav links are displayed in a vertical column on mobile */
   .collapse.navbar-collapse {
-    display: flex;
-    flex-direction: row; /* Change to row for horizontal layout */
-    align-items: center; /* Align items center */
-    justify-content: space-around; /* Space out items evenly */
+    justify-content: flex-end;
   }
   
   .navbar-nav {
-    flex-direction: row; /* Make navbar links horizontal */
+    flex-direction: row;
+    align-items: center;
+    width: 100%;
+    color:#3DB166;
   }
   
   .navbar-nav .nav-item {
-    margin: 0 5px; /* Add spacing between items */
+    width: 100%;
   }
   
   .dropdown-menu {
-    position: static; /* Ensure dropdowns position correctly */
+    position: static;
     float: none;
+  }
+
+  /* Hide services in mobile view by default */
+  .navbar-nav .nav-item:not(.dropdown) {
+    display: none;
+  }
+
+  /* Show services when navbar is expanded */
+  .navbar-collapse.show .navbar-nav .nav-item:not(.dropdown) {
+    display: block;
+  }
+  
+  /* Logo and three-button in one row */
+  .navbar-brand, .navbar-toggler {
+    display: inline-block;
+  }
+
+  .navbar-brand {
+    width: 70%;
+  }
+
+  .navbar-toggler {
+    width: 30%;
+    text-align: right;
   }
 }
 
@@ -319,19 +304,26 @@ h3 {
   .navbar-brand-text {
     font-size: 18px;
   }
+  .navbar-brand img {
+    width: 40px; /* Adjusted size for mobile */
+    height: 40px; /* Adjusted size for mobile */
+  }
   
   .btn-get-started {
-    font-size: 14px;
+    padding: 4px 16px;
   }
   
   .top-bar .container-fluid {
     align-items: flex-start;
   }
-  
   .quick-call-container {
     padding: 5px;
+    display: flex;
+    flex-wrap: wrap; /* Allow wrapping of items */
+    justify-content: space-between; /* Space items evenly */
   }
   
+
   .quick-call .call-details span:first-child {
     font-size: 0.7rem;
   }
@@ -340,25 +332,25 @@ h3 {
     font-size: 0.8rem;
   }
 }
-/* Dropdown Styles */
-.dropdown-menu {
-  background-color: #ffffff;
-  border: 1px solid #e0e0e0;
-  border-radius: 6px;
+/* Media Queries for Responsive Design */
+@media (max-width: 768px) {
+  .navbar-brand-text {
+    font-size: 20px;
+  }
+  
+  .navbar-brand, .navbar-toggler {
+    display: flex;
+    align-items: center;
+  }
 }
 
-.dropdown-item {
-  color: #3DB166;
-  padding: 10px 20px;
-}
-
-.dropdown-item:hover {
-  background-color: #f2f2f2;
-  color: #192F59;
-}
-
-.dropdown-divider {
-  border-top: 1px solid #060606;
-  width: 100%;
-  margin: 0;
+@media (max-width: 576px) {
+  .navbar-brand-text {
+    font-size: 18px;
+  }
+  
+  .navbar-brand img {
+    width: 40px; /* Adjusted size for mobile */
+    height: 40px; /* Adjusted size for mobile */
+  }
 }
