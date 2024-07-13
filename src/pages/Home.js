@@ -8,13 +8,14 @@ const Home = () => {
     <div className="home">
       <img src="path_to_home-img_image" alt="Home Img" class="styled-image" />
 
-      {/* Home Hero Section */}
-      <section className="home-hero-bar">
-        <div className="home-hero-content">
-          <h2 className="home-hero-text">Looking for a first-class business consultant?</h2>
-          <a href="/get-quote" className="home-hero-button">Get a Quote</a>
-        </div>
-      </section>
+      {/* <!-- Home Hero Section --> */}
+<section className="home-hero-bar">
+  <div className="home-hero-content">
+    <h2 className="home-hero-text">Looking for a first-class business consultant?</h2>
+    <a href="/get-quote" className="home-hero-button">Get a Quote</a>
+  </div>
+</section>
+
 
       {/* Image Grid Section */}
       <section className="image-grid-section">
@@ -43,38 +44,39 @@ const Home = () => {
         </div>
       </section>
 
-      {/* Services Section */}
-      <div className="services-section">
-        <div className="services-title-container">
-          <h2 className="services-title">Services</h2>
-        </div>
-        <div className="services-cards">
-          <div className="service-card">
-            <div className="service-icon">
-              <img src="https://via.placeholder.com/50x50.png?text=IT" alt="IT Consultancy" />
-            </div>
-            <h3>IT Consultancy</h3>
-            <p>Astonished set expression solicitude way admiration</p>
-          </div>
-          <div className="service-card">
-            <div className="service-icon">
-              <img src="https://via.placeholder.com/50x50.png?text=Cloud" alt="Cloud Computing" />
-            </div>
-            <h3>Cloud Computing</h3>
-            <p>Astonished set expression solicitude way admiration</p>
-          </div>
-          <div className="service-card">
-            <div className="service-icon">
-              <img src="https://via.placeholder.com/50x50.png?text=Cyber" alt="Cyber Security" />
-            </div>
-            <h3>Cyber Security</h3>
-            <p>Astonished set expression solicitude way admiration</p>
-          </div>
-          <div className="service-card more-button-card">
-            <button className="more-button">more button</button>
-          </div>
-        </div>
+    {/* Services Section */}
+<div className="services-section">
+  <div className="services-title-container">
+    <h2 className="services-title">Services</h2>
+  </div>
+  <div className="services-cards">
+    <div className="service-card">
+      <div className="service-icon">
+        <img src="https://via.placeholder.com/50x50.png?text=IT" alt="IT Consultancy" />
       </div>
+      <h3>IT Consultancy</h3>
+      <p>Astonished set expression solicitude way admiration</p>
+    </div>
+    <div className="service-card">
+      <div className="service-icon">
+        <img src="https://via.placeholder.com/50x50.png?text=Cloud" alt="Cloud Computing" />
+      </div>
+      <h3>Cloud Computing</h3>
+      <p>Astonished set expression solicitude way admiration</p>
+    </div>
+    <div className="service-card">
+      <div className="service-icon">
+        <img src="https://via.placeholder.com/50x50.png?text=Cyber" alt="Cyber Security" />
+      </div>
+      <h3>Cyber Security</h3>
+      <p>Astonished set expression solicitude way admiration</p>
+    </div>
+    <button className="service-card more-button-card">
+      more button
+    </button>
+  </div>
+</div>
+
 
       {/* SDG Solutions Section */}
       <div className="sdg-solutions-section">

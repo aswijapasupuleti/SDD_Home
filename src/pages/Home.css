@@ -36,7 +36,7 @@
 /* Hero Bar Section */
 .home-hero-bar {
   width: 100%;
-  background-color: #3DB166; /* Primary color */
+  background-color: #192F59; /* Primary color */
   display: flex;
   justify-content: center;
   align-items: center;
@@ -53,7 +53,7 @@
 
 .home-hero-text {
   font-size: 24px; /* h2 size */
-  color: #24272C; /* Text color */
+  color: white; /* Text color */
   margin: 0;
   text-align: center; /* Center text */
   max-width: 600px; /* Limit text width on larger screens */
@@ -63,17 +63,18 @@
   font-size: 16px; /* Body text size */
   padding: 10px 20px; /* Button padding */
   color: white; /* White text */
-  background-color: #192F59; /* Secondary color */
-  border: 2px solid #192F59; /* Secondary color */
-  border-radius: 6px; /* Border radius */
+  background-color: #3DB166; /* Primary color */
+  border: 2px solid #192F59; /* Primary color */
+  border-radius: 6px; /* Rounded corners */
   text-decoration: none;
   margin-left: 20px; /* Add some margin for spacing */
   display: inline-block; /* Ensure it's an inline-block element */
 }
 
 .home-hero-button:hover {
-  background-color: #3DB166; /* Primary color */
-  color: white; /* White text */
+  background-color: #192F59; /* Secondary color */
+  color: #3DB166; /* Primary color text */
+  border: 2px solid #3DB166;
 }
 
 /* Responsive adjustments */
@@ -92,6 +93,8 @@
   .home-hero-button {
     margin-left: 0; /* Remove left margin */
     margin-top: 10px; /* Add some space above the button */
+    width: 100%; /* Full width on small screens */
+    text-align: center; /* Center text */
   }
 }
 
@@ -105,7 +108,6 @@
     padding: 8px 16px; /* Smaller button padding */
   }
 }
-
 
 /* Image Grid Section */
 .image-grid-section {
@@ -134,7 +136,7 @@
 }
 
 .image-grid-caption {
-  background-color: #003366;
+  background-color: #192F59; /* Primary color */
   color: white;
   padding: 10px;
   margin-top: -10px;
@@ -197,6 +199,7 @@
     font-size: 16px; /* Adjust font size for very small screens */
   }
 }
+
 
 /* Services Section */
 /* Services Section */
@@ -267,8 +270,9 @@
   font-size: 16px; /* Body text size */
   color: #666;
 }
+
 .more-button-card {
-  background-color: #192F59; /* Secondary color */
+  background-color: #3DB166; /* Secondary color */
   border-radius: 6px;
   padding: 20px; /* Increase padding for better click area */
   margin: 10px; /* Adjust margin for spacing */
@@ -281,29 +285,15 @@
   align-items: center;
   height: 200px; /* Set a fixed height to ensure consistency */
   font-family: 'Poppins', sans-serif;
-}
-
-.more-button {
-  background-color: #192F59; /* Primary color */
-  color: white;
-  border: none;
-  border-radius: 6px;
-  padding: 32px 64px; /* Increased padding for larger button */
-  font-size: 32px; /* Increased font size for larger button */
   cursor: pointer;
-  transition: background-color 0.3s;
-  display: flex; /* Add flexbox properties */
-  justify-content: center; /* Center the text horizontally */
-  align-items: center; /* Center the text vertically */
-  font-family: 'Poppins', sans-serif;
+  border: none; /* Remove default button border */
+  color: white; /* Text color */
+  font-size: 49px; /* Text size */
 }
 
-.more-button.secondary {
-  background-color: #3DB166; /* Secondary color filled */
-}
-
-.more-button:hover {
-  background-color: #3DB166; /* Secondary color on hover */
+.more-button-card:hover {
+  background-color: #192F59; /* Secondary color on hover */
+  color:#3DB166 ;
 }
 
 /* Services Media Queries */
@@ -339,6 +329,7 @@
     max-width: 100%;
   }
 }
+
 /* SDG Sol section */
 .sdg-solutions-section {
   padding: 2% 0; /* Reduced top padding to remove top space */
@@ -365,7 +356,7 @@
   padding: 20px;
   border-radius: 8px;
   background-color: #3DB166; /* Primary color */
-  color: white; /* Text color */
+  color: white ; /* Text color */
 }
 
 .sdg-solutions-left h3 {
@@ -485,21 +476,21 @@
 }
 
 .help-button {
-  background-color:#3DB166; /* Button background color */
+  background-color: #3DB166; /* Button background color */
   color: white; /* Button text color */
   border: 2px solid #3DB166; /* Border color */
   padding: 8px 16px; /* Button Padding */
   font-family: 'Poppins', sans-serif; /* Font style */
   font-size: 14px; /* Button text size */
-  border-radius: 4px; /* Border radius */
+  border-radius: 12px; /* More rounded corners */
   cursor: pointer;
   transition: background-color 0.3s, color 0.3s, border-color 0.3s;
   width: auto; /* Adjusted to auto width */
 }
 
 .help-button:hover {
-  background-color: #3DB166; /* Secondary color on hover */
-  color: #192F59; /* Primary color text on hover */
+  background-color: #192F59; /* Secondary color on hover */
+  color: #3DB166; /* Primary color text on hover */
   border-color: #192F59; /* Border color on hover */
 }
 
@@ -518,7 +509,7 @@
   }
 
   .help-button {
-    margin-top: 10px; /* Add space above the button */
+    margin-top: 6px; /* Add space above the button */
     align-self: center; /* Center the button */
   }
 }
@@ -539,6 +530,7 @@
   .help-button {
     font-size: 12px; /* Smaller button text */
     padding: 6px 12px; /* Smaller button padding */
+    border-radius: 6px; /* Adjust border radius for small screens */
   }
 }
 
@@ -585,9 +577,13 @@
   padding: 10px 20px;
   font-size: 18px;
   cursor: pointer;
-  border-radius: 5px;
+  border-radius: 6px;
   margin-top: 20px; /* Added margin for spacing */
   width: auto; /* Adjust button width */
+}
+.explore-button:hover {
+  background-color: #192F59; /* Secondary color on hover */
+  color: #3DB166; /* Primary color text on hover */
 }
 
 /* Responsive adjustments */
@@ -814,7 +810,9 @@ input[type="email"] {
   margin-bottom: 20px;
 }
 
-button {
+/* Ensure specificity by targeting the button within .form-content */
+/* Ensure specificity by targeting the button within .form-content */
+.form-content button {
   padding: 15px 20px; /* Button Padding */
   background-color: #3DB166; /* Primary Color */
   color: white;
@@ -822,13 +820,16 @@ button {
   border-radius: 6px; /* Border radius */
   cursor: pointer;
   font-size: 18px; /* Body text */
-  width: 30%;
+  width: 100%; /* Full width for button */
   transition: background-color 0.3s ease; /* Smooth hover transition */
 }
 
-button:hover {
-  background-color: #192F59; /* Secondary Color */
+.form-content button:hover {
+  background-color: #192F59;
+  color: #3DB166; /* Darker shade on hover */
 }
+
+
 
 @media (max-width: 768px) {
   body, html {
