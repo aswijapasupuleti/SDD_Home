@@ -1,4 +1,3 @@
-
 import React, { useState, useEffect } from 'react';
 import styled from 'styled-components';
 import image1 from './images/image1.jpg';
@@ -20,9 +19,9 @@ const Slide = styled.div`
 
 const SlideImage = styled.img`
   width: 100%;
-  height: auto; /* Maintain aspect ratio */
-  max-height: 400px; /* Reduce height */
-  object-fit: cover; /* Ensure the image covers the entire width */
+  height: auto;
+  max-height: 400px;
+  object-fit: cover;
 `;
 
 const PrevNextButtons = styled.a`
@@ -75,7 +74,7 @@ const Slideshow = () => {
   useEffect(() => {
     const timer = setInterval(() => {
       setCurrentIndex((prevIndex) => (prevIndex + 1) % images.length);
-    }, 5000); // 5000ms = 5s
+    }, 5000);
 
     return () => clearInterval(timer);
   }, [images.length]);
