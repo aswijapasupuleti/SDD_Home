@@ -4,6 +4,7 @@ import './App.css';
 import 'bootstrap/dist/css/bootstrap.min.css';
 import Footer from './pages/Footer';
 import Header from './pages/Header';
+import Slideshow from './pages/Slideshow';
 
 
 
@@ -13,6 +14,7 @@ const App = () => {
     <div className="app">
      
       <Header />
+      <Slideshow />
       <Home />
        <Footer />
     </div>

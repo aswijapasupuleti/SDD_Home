@@ -1,11 +1,29 @@
+/* General Styles */
 .footer {
+  display: flex;
+  justify-content: center;
+  background-color: black;
+  color: #ffffff;
+  padding: 20px 0;
+}
+
+.footer-container {
+  width: 100%;
+  max-width: 1200px;
+  padding: 0 20px;
+  box-sizing: border-box;
+}
+
+.footer-main, .footer-secondary, .footer-bottom {
+  padding: 20px 0;
+}
+
+.footer-main {
   display: flex;
   justify-content: space-between;
   align-items: center;
-  background-color: black;
-  padding: 20px;
-  color: #ffffff;
   flex-wrap: wrap;
+  margin-bottom: 20px; /* Adjust for spacing between sections */
 }
 
 .footer-logo {
@@ -60,10 +78,6 @@
   display: flex;
   justify-content: space-around;
   align-items: flex-start;
-  background-color: black;
-  padding: 40px 20px;
-  color: #ffffff;
-  border-top: 1px solid #444;
   flex-wrap: wrap;
 }
 
@@ -160,12 +174,9 @@
   display: flex;
   justify-content: space-between;
   align-items: center;
-  background-color: black;
-  padding: 10px 20px;
-  color: #ffffff;
-  border-top: 1px solid #444;
   flex-wrap: wrap;
   text-align: center;
+  margin-top: 20px; /* Adjust for spacing between sections */
 }
 
 .footer-bottom p {
@@ -184,34 +195,49 @@
 }
 
 @media (max-width: 768px) {
-  .footer, .footer-secondary, .footer-bottom {
-    flex-direction: row;
-    align-items: flex-start;
-    padding: 20px 10px;
-    margin-right:10px;
+  .footer-main, .footer-secondary, .footer-bottom {
+    flex-direction: column;
+    align-items: center;
   }
 
   .footer-info {
-    flex-direction: row;
+    flex-direction: column;
     margin-left: 0;
   }
 
   .footer-item {
-    margin-bottom: 20px;
+    margin-right: 0;
   }
 
   .footer-column {
     margin: 20px 0;
   }
 
-  .footer-bottom {
-    flex-direction: row;
-    text-align: center;
-  }
-
   .footer-bottom a {
     margin-left: 0;
     margin-top: 10px;
+  }
+}
+
+@media (max-width: 480px) {
+  .footer-logo img {
+    height: 40px;
+  }
+
+  .footer-text h3, .footer-text p {
+    font-size: 14px;
+  }
+
+  .footer-column h3 {
+    font-size: 16px;
+  }
+
+  .footer-bottom p {
+    font-size: 12px;
+  }
+
+  .footer-bottom a {
+    font-size: 12px;
   }
 }
 

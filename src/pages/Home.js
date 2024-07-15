@@ -9,7 +9,7 @@ import LightbulbImage from './images/imagegrid3.jpg';
 const Home = () => {
   return (
     <div className="home">
-      <img src="path_to_home-img_image" alt="Home Img" class="styled-image" />
+      
 
       {/* <!-- Home Hero Section --> */}
 <section className="home-hero-bar">
