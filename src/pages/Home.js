@@ -5,6 +5,8 @@ import { faChartLine, faGlobe, faLightbulb } from '@fortawesome/free-solid-svg-i
 import ChartImage from './images/imagegrid1.jpg'; // Make sure to update the path
 import GlobeImage from './images/imagegrid2.jpg'; // Make sure to update the path
 import LightbulbImage from './images/imagegrid3.jpg';
+import digital from './images/digital.jpg';
+import form from './images/form.jpg'
 
 const Home = () => {
   return (
@@ -128,23 +130,24 @@ const Home = () => {
 
 
       {/* Digital Marketing Section */}
-      <div className="digital-marketing-section">
-        <div className="digital-marketing-image">
-          <img src="path_to_marketing_image" alt="Digital Marketing" />
-        </div>
-        <div className="digital-marketing-text">
-          <h2>Digital Marketing</h2>
-          <h1>Marketing & Sale Solutions To Grow Your Business</h1>
-          <p>Creative marketing services can help grow your business in the local market by generating more awareness and interest in your products or services. Some effective strategies include:</p>
-          <ul>
-            <li>Branding</li>
-            <li>Content Marketing</li>
-            <li>Search Engine Optimization</li>
-            <li>Social Media Marketing</li>
-            <li>Email Marketing</li>
-          </ul>
-        </div>
-      </div>
+      {/* <!-- Digital Marketing Section --> */}
+<div className="digital-marketing-section">
+  <div className="digital-marketing-image">
+    <img src={digital} alt="Digital Marketing" />
+  </div>
+  <div className="digital-marketing-text">
+    <h2>Digital Marketing</h2>
+    <h1>Marketing & Sale Solutions To Grow Your Business</h1>
+    <p>Creative marketing services can help grow your business in the local market by generating more awareness and interest in your products or services. Some effective strategies include:</p>
+    <ul>
+      <li>Branding</li>
+      <li>Content Marketing</li>
+      <li>Search Engine Optimization</li>
+      <li>Social Media Marketing</li>
+      <li>Email Marketing</li>
+    </ul>
+  </div>
+</div>
 
       {/* Left Content Section
       <div className="left-content">
@@ -155,14 +158,17 @@ const Home = () => {
       <div className="form-section">
         <div className="form-container">
           <div className="form-image">
-            <img src="path_to_form_image" alt="Form" />
+            <img src={form} alt="Form" />
           </div>
           <div className="form-content">
             <h1>Get a Free Website Audit.</h1>
             <form>
               <div className="input-row">
                 <input type="text" placeholder="Domain Name*" required />
-                <input type="text" placeholder="Phone" />
+               
+              </div>
+              <div className="input-row">
+              <input type="text" placeholder="Phone" />
               </div>
               <input type="email" placeholder="E-mail*" required />
               <button type="submit">Send Message</button>

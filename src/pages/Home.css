@@ -312,6 +312,11 @@
   .service-card, .more-button-card {
     max-width: 90%;
   }
+  
+  .services-section {
+    height: 100%;
+    padding: 0 5% 5% 5%; /* Ensure equal left and right padding */
+  }
 }
 
 @media (max-width: 480px) {
@@ -579,6 +584,7 @@
   align-items: center;
   justify-content: flex-start; /* Align content to the left */
   text-align: left; /* Align text to the left */
+  height: 600px;
 }
 
 .content-text {
@@ -610,6 +616,7 @@
   margin-top: 20px; /* Added margin for spacing */
   width: auto; /* Adjust button width */
 }
+
 .explore-button:hover {
   background-color: #192F59; /* Secondary color on hover */
   color: #3DB166; /* Primary color text on hover */
@@ -619,13 +626,13 @@
 @media (max-width: 768px) {
   .main-content {
     flex-direction: column; /* Stack elements vertically on smaller screens */
-    align-items: center; /* Center align content */
+    align-items: flex-start; /* Align content to the left */
     padding: 20px 10px; /* Reduce padding for smaller screens */
   }
 
   .content-text {
     max-width: 100%; /* Full width for smaller screens */
-    text-align: center; /* Center align text for smaller screens */
+    text-align: left; /* Align text to the left for smaller screens */
   }
 
   .content-text h1 {
@@ -646,6 +653,13 @@
 @media (max-width: 480px) {
   .main-content {
     padding: 15px 10px; /* Further reduce padding for extra small screens */
+    height: auto; /* Adjust height to fit content */
+    justify-content: flex-start; /* Align content to the top */
+  }
+
+  .content-text {
+    max-width: 50%; /* Adjust text width to take half the page */
+    text-align: left; /* Align text to the left */
   }
 
   .content-text h1 {
@@ -659,8 +673,10 @@
   .explore-button {
     padding: 6px 12px; /* Further adjust button padding for extra small screens */
     font-size: 12px; /* Further adjust button text size for extra small screens */
+    width: auto; /* Adjust button width */
   }
 }
+
 
 
 /* Digital Marketing section */
@@ -669,24 +685,31 @@
   color: #000;
   padding: 40px 20px;
   display: flex;
-  flex-direction: column; /* Adjusted for mobile layout */
-  align-items: flex-start; /* Align items to the left */
-  text-align: center; /* Align text to the center initially */
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
 }
 
 .digital-marketing-image {
-  width: 100%; /* Ensure image responsiveness */
-  max-width: 100%;
+  width: 100%;
+  max-width: 400px;
   margin-bottom: 20px;
+  margin-left: 5%;
+}
+
+.digital-marketing-image img {
+  width: 100%;
+  height: auto;
+  display: block; /* Ensures there is no space below the image */
 }
 
 .digital-marketing-text {
-  max-width: 100%; /* Adjusted for mobile layout */
-  color: #192F59; /* Text color */
+  max-width: 100%;
+  color: #192F59;
 }
 
 .digital-marketing-text h2 {
-  color: #3DB166; /* Heading color */
+  color: #3DB166;
 }
 
 .digital-marketing-text h1 {
@@ -714,47 +737,49 @@
   content: '➔';
   position: absolute;
   left: 0;
-  color: #3DB166; /* List item bullet color */
+  color: #3DB166;
 }
 
 /* Responsive Adjustments */
 @media (min-width: 768px) {
   .digital-marketing-section {
-    flex-direction: row; /* Ensure row layout on larger screens */
+    flex-direction: row;
     justify-content: space-between;
-    align-items: center; /* Center items vertically */
-    text-align: left; /* Align text to the left */
-    padding: 40px 20px; /* Adjust padding for desktop */
+    align-items: center;
+    text-align: left;
   }
 
   .digital-marketing-image {
-    width: 40%; /* Adjusted image width for desktop */
-    max-width: none;
-    margin-right: 40px; /* Margin between image and text */
+    width: 40%;
+    max-width: 40%;
+    margin-right: 40px;
+    margin-bottom: 0;
   }
 
   .digital-marketing-text {
-    max-width: 50%; /* Adjusted width for text content */
+    max-width: 50%;
   }
 }
 
 /* Media Query for Smaller Screens */
 @media (max-width: 767px) {
   .digital-marketing-section {
-    padding: 40px 20px; /* Adjust padding for smaller screens */
+    padding: 20px;
   }
 
   .digital-marketing-image {
-    width: 100%; /* Full width for image on smaller screens */
-    margin-right: 0; /* Remove margin on smaller screens */
-    margin-bottom: 20px;
+    width: 100%;
+    max-width: 100%;
+    margin-right: 10%;
+    
   }
 
   .digital-marketing-text {
-    max-width: 100%; /* Full width for text content on smaller screens */
-    text-align: center; /* Center text on smaller screens */
+    max-width: 100%;
+    text-align: center;
   }
 }
+
 
 body, html {
   margin: 0;
@@ -779,6 +804,7 @@ body, html {
   display: flex;
   max-width: 1600px;
   width: 100%;
+  height: 600px; /* Fixed height */
   background-color: #fff; /* White background */
   border-radius: 8px;
   overflow: hidden;
@@ -786,12 +812,12 @@ body, html {
 }
 
 .form-image {
-  flex: 1;
+  flex: 1.5;
 }
 
 .form-image img {
   width: 100%;
-  height: 100%;
+  height: 100%; /* Full height of the form image section */
   object-fit: cover;
   border-top-left-radius: 8px;
   border-bottom-left-radius: 8px;
@@ -801,6 +827,9 @@ body, html {
   flex: 1;
   padding: 40px;
   color: #24272C; /* Text Color */
+  display: flex;
+  flex-direction: column;
+  justify-content: center; /* Center content vertically */
 }
 
 .form-content h1 {
@@ -822,9 +851,9 @@ body, html {
 .input-row input {
   padding: 15px;
   border-radius: 5px;
-  border: none;
+  border: 1px solid #ccc; /* Border for inputs */
   font-size: 16px; /* Body text */
-  background-color: #F2F2F2; /* Page BG Color */
+  background-color: #F9F9F9; /* Slightly different BG color for inputs */
   color: #24272C; /* Text Color */
   flex: 1;
 }
@@ -832,15 +861,13 @@ body, html {
 input[type="email"] {
   padding: 15px;
   border-radius: 5px;
-  border: none;
+  border: 1px solid #ccc; /* Border for input */
   font-size: 16px; /* Body text */
-  background-color: #F2F2F2; /* Page BG Color */
+  background-color: #F9F9F9; /* Slightly different BG color for input */
   color: #24272C; /* Text Color */
   margin-bottom: 20px;
 }
 
-/* Ensure specificity by targeting the button within .form-content */
-/* Ensure specificity by targeting the button within .form-content */
 .form-content button {
   padding: 15px 20px; /* Button Padding */
   background-color: #3DB166; /* Primary Color */
@@ -855,30 +882,30 @@ input[type="email"] {
 
 .form-content button:hover {
   background-color: #192F59;
-  color: #3DB166; /* Darker shade on hover */
+  color: #fff; /* White text on hover */
 }
-
-
 
 @media (max-width: 768px) {
   body, html {
     overflow-x: hidden; /* Prevent horizontal scrolling */
   }
-  
+
   .container {
     flex-direction: column;
+    height: auto; /* Allow height to adjust for mobile view */
     padding: 20px; /* Padding for mobile view */
   }
 
   .form-container {
     flex-direction: column; /* Stack form elements on smaller screens */
     width: 100%;
+    height: auto; /* Adjust height for smaller screens */
     margin: 0; /* Remove margin */
   }
 
   .form-image img {
     width: 100%;
-    height: auto;
+    height: auto; /* Adjust height for smaller screens */
     border-radius: 8px 8px 0 0; /* Adjust border radius for top corners only */
     margin-bottom: 20px; /* Margin bottom for spacing */
   }
