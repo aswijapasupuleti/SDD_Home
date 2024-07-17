@@ -38,6 +38,11 @@
   margin-bottom: 20px; /* Add margin for spacing between items on small screens */
 }
 
+.image-grid-item:hover {
+  transform: scale(1.05); /* Slightly enlarge the card */
+  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2); /* Darker shadow on hover */
+}
+
 .image-placeholder {
   width: 100%;
   flex-grow: 1; /* Allow image container to grow and fill available space */
@@ -206,6 +211,8 @@
   height: 600px;
 }
 
+
+
 .services-title-container {
   display: flex;
   justify-content: center;
@@ -247,6 +254,11 @@
   align-items: center;
   height: 450px; /* Set a fixed height to ensure consistency */
   font-family: 'Poppins', sans-serif;
+}
+
+.service-card:hover {
+  transform: scale(1.05); /* Slightly enlarge the card */
+  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2); /* Darker shadow on hover */
 }
 
 .service-icon img {
@@ -812,7 +824,7 @@ body, html {
 }
 
 .form-image {
-  flex: 1.5;
+  flex: 1;
 }
 
 .form-image img {
@@ -842,11 +854,15 @@ body, html {
   flex-direction: column;
 }
 
+
+
 .input-row {
   display: flex;
   gap: 10px;
   margin-bottom: 20px;
 }
+
+
 
 .input-row input {
   padding: 15px;
@@ -858,6 +874,13 @@ body, html {
   flex: 1;
 }
 
+.input-row input:hover {
+  transform: scale(1.05); /* Slightly enlarge the card */
+  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2); /* Darker shadow on hover */
+}
+
+
+
 input[type="email"] {
   padding: 15px;
   border-radius: 5px;
@@ -866,6 +889,11 @@ input[type="email"] {
   background-color: #F9F9F9; /* Slightly different BG color for input */
   color: #24272C; /* Text Color */
   margin-bottom: 20px;
+}
+
+input[type="email"]:hover {
+  transform: scale(1.05); /* Slightly enlarge the card */
+  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2); /* Darker shadow on hover */
 }
 
 .form-content button {
