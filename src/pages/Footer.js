@@ -1,5 +1,6 @@
 import React from 'react';
 import './Footer.css';
+import logo from "./SDG-Logo.png";
 
 
 const Footer = () => {
@@ -7,7 +8,19 @@ const Footer = () => {
     <div className="footer-container">
       <footer className="footer-top">
         <div className="footer-logo">
-          <img src="path_to_tronix_logo" alt="Tronix Solution" />
+          {/* <img src="pages/SDG-Logo.png" alt="SDG Solution" /> */}
+          <a className="footer-container" href="/">
+            <img
+              src={logo}
+              alt="Logo"
+              width="50"
+              height="50"
+              className="footer-logo"
+            />
+            <span className="footer-logo-text">SDG Solutions</span>
+          </a>
+          
+            
         </div>
         <div className="footer-info">
           <div className="footer-item">

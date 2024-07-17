@@ -23,7 +23,7 @@
   display: flex;
   justify-content: space-between;
   flex-wrap: wrap;
-  width: 80%;
+  width: 70%;
 }
 
 .footer-item {
@@ -116,8 +116,6 @@
   padding: 10px;
   border-radius: 50%;
 }
-
-
 
 .footer-bottom {
   display: flex;

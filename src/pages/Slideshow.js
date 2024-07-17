@@ -11,6 +11,7 @@ const SlideshowContainer = styled.div`
   position: relative;
   margin: auto;
   overflow: hidden;
+  
 `;
 
 const Slide = styled.div`
