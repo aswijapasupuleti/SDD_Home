@@ -34,7 +34,7 @@ const Footer = () => {
             <i className="fas fa-envelope"></i>
             <div className="footer-text">
               <h3>Email Us Here</h3>
-              <p>info@tronix.com</p>
+              <p>info@sdgsolutions.com</p>
             </div>
           </div>
           <div className="footer-item">
@@ -50,7 +50,7 @@ const Footer = () => {
       <footer className="footer-main">
         <div className="footer-column">
           <h3>About Company</h3>
-          <p>At TechPros Solutions, we are about technology and dedicated to providing IT solutions for businesses of all sizes.</p>
+          <p>At SDG Solutions, we are about technology and dedicated to providing IT solutions for businesses of all sizes.</p>
           <div className="social-icons">
             <i className="fab fa-facebook-f"></i>
             <i className="fab fa-instagram"></i>
@@ -105,7 +105,7 @@ const Footer = () => {
 
       <footer className="footer-bottom">
         <div className="footer-bottom-left">
-          <p>© Copyright 2024 Tronix All Rights Reserved Themepul</p>
+          <p>© Copyright 2024 Tronix All Rights Reserved Dinesh</p>
         </div>
         <div className="footer-bottom-right">
           <a href="/terms-conditions">Terms & Conditions</a>

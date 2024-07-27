@@ -13,14 +13,14 @@ function Navbar() {
           <span className="top-bar-info">Mon-Fri: 8:00 AM - 6:30 PM</span>
           <div className="notification-bar">
             <span>
-              Get 50% off on Tronix theme. Limited time offer! Purchase now
+              Get 50% off on SDG Solutions theme. Limited time offer! Purchase now
             </span>
           </div>
           <div className="top-links-container">
             <a href="/services" className="top-link">All Services</a>
             <a href="/careers" className="top-link">Careers</a>
             <a href="/news" className="top-link">News</a>
-            <a href="mailto:media@tronix.com" className="top-link">media@tronix.com</a>
+            <a href="mailto:media@tronix.com" className="top-link">media@sdgsolutions.com</a>
           </div>
         </div>
       </div>
