@@ -106,7 +106,7 @@ const Home = () => {
       {/* help bar */}
 
       <div class="header-bar">
-  <img src="path_to_header_image" alt="Header" class="header-image" />
+  <img src="https://i.pinimg.com/736x/92/9f/1b/929f1bfe6917069e47b1b6e4b2e97bf0.jpg" alt="Header" class="header-image" />
   <div class="header-text">
     <h1>We're Here To Help</h1>
     <p>Power your team with setech</p>
